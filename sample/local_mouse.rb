@@ -1,7 +1,11 @@
 require "nunchuck/xinput/mouse"
 require "xinput/local"
 
-port = "/dev/i2c-1"
+port = ARGV[0]
+
+unless port
+  raise "Must pass 'port' value: ie, /dev/i2c-1"
+end
 
 mouse     = XInput::LocalMouse.new
 nunchuck  = Nunchuck::Mouse.new(port, mouse)

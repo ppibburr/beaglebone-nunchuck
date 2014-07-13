@@ -1,8 +1,12 @@
 require "nunchuck/device"
 
-addr = "/dev/i2c-1"
+port = ARGV[0]
 
-nunchuck = Nunchuck::Device.new addr
+unless port
+  raise "Must pass 'port' value: ie, /dev/i2c-1"
+end
+
+nunchuck = Nunchuck::Device.new port
 nunchuck.init
 
 loop do
