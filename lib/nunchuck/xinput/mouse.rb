@@ -5,7 +5,7 @@ module Nunchuck
   class Mouse < Device
     include X11InputDevice
     
-    MOTION_FAST = 15
+    MOTION_FAST = 35
     
     DEFAULT_MAP = {
       :c => MOUSE_BUTTON_LEFT,
