@@ -3,6 +3,7 @@ require "nunchuck/device"
 addr = "/dev/i2c-1"
 
 nunchuck = Nunchuck::Device.new addr
+nunchuck.init
 
 loop do
   3.times do
