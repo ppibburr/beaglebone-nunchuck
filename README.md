@@ -1,7 +1,12 @@
 beaglebone-nunchuck
 ===================
 
-Ruby library for using a Wii Nunchuck on a beaglebone. Supports the nunchuck as a X11 Input Device
+Ruby library for using a Wii Nunchuck on a beaglebone.  
+
+Extra Features
+===  
+* Provides a library for using the nunchuck as a X11 Input Device.  
+* Provides a library for using the nunchuck as an X11 Input Device on remote machines.  
 
 Build
 ===
