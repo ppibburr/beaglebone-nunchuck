@@ -10,11 +10,11 @@ loop do
   end
   
   p [
-    nunchuck.jx,
-    nunchuck.jy,
-    nunchuck.ax,
-    nunchuck.ay,
-    nunchuck.az,
+    nunchuck.axis_jx,
+    nunchuck.axis_jy,
+    nunchuck.axis_ax,
+    nunchuck.axis_ay,
+    nunchuck.axis_az,
     nunchuck.c_button_pressed?,
     nunchuck.z_button_pressed?,
     nunchuck.digital_down?,  
