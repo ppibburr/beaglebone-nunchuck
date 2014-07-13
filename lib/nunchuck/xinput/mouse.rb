@@ -67,7 +67,7 @@ module Nunchuck
           
           if i == 0 then i = 1 end
              
-          nx = fast - i   
+          nx = MOTION_FAST - i   
            
           x_polar = -1   
         elsif (axis_jx() > xtrim2)
@@ -85,7 +85,7 @@ module Nunchuck
           
           if i == 0 then i = 1 end
              
-          ny = fast - i  
+          ny = MOTION_FAST - i  
           
           changed = true    
         elsif (axis_jy() > ytrim2)
