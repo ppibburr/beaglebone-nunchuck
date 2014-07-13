@@ -4,8 +4,12 @@ require "xinput/keyboard"
 require "socket"
 
 module XInput
+  # Implements an input device for the X Display of a remote machine
   module Remote
     attr_accessor :target
+    
+    # @param host [String] the host
+    # @param port [Integer] the port
     def initialize host, port = 3333, *o
       super *o
       @target = TCPSocket.new(host,port)
@@ -19,4 +23,8 @@ module XInput
   class RemoteMouse < Mouse
     include Remote
   end
+  
+  class RemoteKeyboard < Keyboard
+    include Remote
+  end  
 end

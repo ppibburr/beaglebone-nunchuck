@@ -14,14 +14,15 @@ module Nunchuck
       :down  => 46
     }
     
+    # A loop that polls the nunchuck then sends the corresponding input events to X
     def poll
       bc = bz = dl = dr = du = dd = false
       
       while true;
-        device.read_packet;
-        device.read_packet
+        read_packet;
+        read_packet
         
-        next unless device.read_packet
+        next unless read_packet
         
         if c_button_pressed? and !bc
           bc = true
@@ -85,6 +86,6 @@ module Nunchuck
 
         sleep POLL_RATE            
       end
-	  end
+	end
   end
 end

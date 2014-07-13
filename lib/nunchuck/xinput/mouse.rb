@@ -6,10 +6,11 @@ module Nunchuck
     include X11InputDevice
     
     DEFAULT_MAP = {
-      :c => 1,
-      :z => 3
+      :c => MOUSE_LEFT_BUTTON,
+      :z => MOUSE_RIGHT_BUTTON
     }
     
+    # A loop that polls the nunchuck then sends corresponding inputs to X11
     def poll
       bc = bz = false
 

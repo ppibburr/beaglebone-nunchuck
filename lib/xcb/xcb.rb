@@ -37,6 +37,9 @@ module XCB
     attach_function :xcb_flush,[:pointer],:int
 	attach_function :xcb_screen_next,[:pointer],:void
 	
+	# Does the connection have an error?
+	#
+	# @return [Boolean] true if it does, false otherwise
 	def self.connection_has_error?(c)
       self.xcb_connection_has_error(c)	
 	end
@@ -50,6 +53,7 @@ module XCB
 	  ::XCB.send(:xcb_get_setup,*o,&b)
 	end	
 
+    # Create a connection to an X Display
 	def self.connect *o, &b
 	  ::XCB.send(:xcb_connect,*o,&b)
 	end
@@ -58,6 +62,7 @@ module XCB
 	  ::XCB.send(:xcb_setup_roots_iterator,*o,&b)
 	end
 
+    # Flushes the connection
 	def self.flush *o, &b
 	  ::XCB.send(:xcb_flush,*o,&b)
 	end
