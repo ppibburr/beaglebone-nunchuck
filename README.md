@@ -3,6 +3,18 @@ beaglebone-nunchuck
 
 Ruby library for using a Wii Nunchuck on a beaglebone. Supports the nunchuck as a X11 Input Device
 
+Build
+===
+Build the c extension:  
+`ruby ./setup.rb`
+
+Usage
+===
+`ruby -I./lib ...`  
+or  
+`export RUBYLIB=$RUBYLIB:./lib`
+
+
 Example
 ===
 ```ruby
