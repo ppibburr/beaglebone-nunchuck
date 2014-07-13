@@ -20,7 +20,7 @@ module Nunchuck
     
     # Wake up the nunchuck
     def init
-      ::Nunchuck::nunchuck_init(self.to_ptr)    
+      ::Nunchuck::nunchuck_init(@ptr)    
     end
     
     # Updates the data
