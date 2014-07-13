@@ -27,61 +27,61 @@ module Nunchuck
         if c_button_pressed? and !bc
           bc = true
           
-          xinput.keydown! @map[:c]
+          xinput.key_down! @map[:c]
         elsif !c_button_pressed? and bc
           bc = false
           
-          xinput.keyup! @map[:c]
+          xinput.key_up! @map[:c]
         end
         
         if z_button_pressed? and !bz
           bz = true
           
-          xinput.keydown! @map[:z]          
+          xinput.key_down! @map[:z]          
         elsif !z_button_pressed? and bz
           bz = false
 
-          xinput.keyup! @map[:z]
+          xinput.key_up! @map[:z]
         end
        
         if digital_right? and !dr
           dr = true
           
-          xinput.keydown! @map[:right]          
+          xinput.key_down! @map[:right]          
         elsif !digital_right? and dr
           dr = false
           
-          xinput.keyup! @map[:right]          
+          xinput.key_up! @map[:right]          
         end
         
         if digital_left? and !dl
           dl = true
         
-          xinput.keydown! @map[:left]        
+          xinput.key_down! @map[:left]        
         elsif !digital_left? and dl
           dl = false
           
-          xinput.keyup! @map[:left]          
+          xinput.key_up! @map[:left]          
         end 
 
         if digital_up? and !du
           du = true
         
-          xinput.keydown! @map[:up]        
+          xinput.key_down! @map[:up]        
         elsif !digital_up? and du
           du = false
           
-          xinput.keyup! @map[:up]          
+          xinput.key_up! @map[:up]          
         end
         
         if digital_down? and !dd
           dd = true
           
-          xinput.keydown! @map[:down]          
+          xinput.key_down! @map[:down]          
         elsif !digital_down? and dd
           dd = false
 
-          xinput.keyup! @map[:down]
+          xinput.key_up! @map[:down]
         end 
 
         sleep POLL_RATE            
