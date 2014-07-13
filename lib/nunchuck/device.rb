@@ -52,28 +52,28 @@ module Nunchuck
     #
     # @return [Boolean] true if it is, false otherwise
     def digital_left?
-      jx < (JX_NEUTRAL - AXIS_TRIM - 46)    
+      axis_jx < (JX_NEUTRAL - AXIS_TRIM - 46)    
     end    
     
     # Is the joystick pressed right?
     #
     # @return [Boolean] true if it is, false otherwise
     def digital_right?
-      jx > (JX_NEUTRAL + AXIS_TRIM + 46)
+      axis_jx > (JX_NEUTRAL + AXIS_TRIM + 46)
     end
     
     # Is the joystick pressed up?
     #
     # @return [Boolean] true if it is, false otherwise
     def digital_up?
-      jy > (JY_NEUTRAL + AXIS_TRIM + 69)    
+      axis_jy > (JY_NEUTRAL + AXIS_TRIM + 69)    
     end
     
     # Is the joystick pressed down?
     #
     # @return [Boolean] true if it is, false otherwise    
     def digital_down?
-      jy < (JY_NEUTRAL - AXIS_TRIM - 69)    
+      axis_jy < (JY_NEUTRAL - AXIS_TRIM - 69)    
     end    
     
     # Is the C button pressed?
