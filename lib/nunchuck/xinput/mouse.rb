@@ -24,15 +24,15 @@ module Nunchuck
           xinput.button_down! @map[:c]
           
           bc = true
-        elsif !device.bc and bc 
+        elsif !c_button_pressed? and bc 
           xinput.button_up! @map[:c]
           bc = false
         end
         
-        if device.bz and !bz
+        if z_button_pressed? and !bz
           xinput.button_down! @map[:z]
           bz = true
-        elsif !device.bz and bz 
+        elsif !z_button_pressed? and bz 
           xinput.button_up! @map[:z]
           bz = false
         end    
