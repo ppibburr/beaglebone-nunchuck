@@ -1,4 +1,4 @@
-c = "gcc -shared -o nunchuck.so lib/nunchuck/ext/src/nunchuck.c"
+c = "gcc -shared -o nunchuck.so lib/nunchuck/ext/src/nunchuck.c -fPIC"
 puts c
 system c
 
