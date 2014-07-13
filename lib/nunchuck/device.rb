@@ -19,31 +19,40 @@ module Nunchuck
     end
     
     # Wake up the nunchuck
+    #
+    # @return [Boolean] true if init was ok, otherwise false
     def init
       ::Nunchuck::nunchuck_init(@ptr)    
     end
     
     # Updates the data
+    #
+    # @return [Boolean] true if performed ok, otherwise false
     def read_packet
       ::Nunchuck::nunchuck_read_packet(@ptr)    
     end    
     
+    # @return [Float]
     def axis_ax
       ::Nunchuck::nunchuck_get_ax @ptr
     end
     
+    # @return [Float]
     def axis_ay
       ::Nunchuck::nunchuck_get_ay @ptr    
     end
     
+    # @return [Float]    
     def axis_az
       ::Nunchuck::nunchuck_get_az @ptr    
     end
     
+    # @return [Float]    
     def axis_jx
       ::Nunchuck::nunchuck_get_jx @ptr    
     end
     
+    # @return [Float]    
     def axis_jy
       ::Nunchuck::nunchuck_get_jy @ptr    
     end
