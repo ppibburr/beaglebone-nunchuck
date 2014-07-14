@@ -6,12 +6,12 @@ module Nunchuck
     include X11InputDevice
     
     DEFAULT_MAP = {
-      :z     => 41,
-      :c     => 42, 
-      :left  => 43, 
-      :right => 44,
-      :up    => 45,
-      :down  => 46
+      :z     => 41, # f
+      :c     => 42, # g
+      :left  => 43, # h
+      :right => 44, # j
+      :up    => 45, # k
+      :down  => 46  # l
     }
     
     # A loop that polls the nunchuck then sends the corresponding input events to X
