@@ -29,7 +29,7 @@ loop do
     nunchuck.digital_left?,
     nunchuck.digital_right?              
   ].map do |q|
-    q.to_s.ljust(5)
+    q.to_s.ljust(10)
   end.join())
   
   sleep 0.2
