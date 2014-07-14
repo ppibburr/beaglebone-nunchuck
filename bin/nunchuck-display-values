@@ -11,12 +11,7 @@ end
 nunchuck = Nunchuck::Device.new port
 nunchuck.init
 
-loop do
-  3.times do
-    nunchuck.read_packet
-  end
-  
-  puts("\r"+[
+puts("\r"+[
     :jx,
     :jy,
     :ax,
@@ -30,7 +25,13 @@ loop do
     :RIGHT              
   ].map do |q|
     q.to_s.ljust(10)
-  end.join())
+  end.join()
+)
+
+loop do
+  3.times do
+    nunchuck.read_packet
+  end
   
   print("\r"+[
     nunchuck.axis_jx,
