@@ -16,7 +16,7 @@ loop do
     nunchuck.read_packet
   end
   
-  p [
+  print [
     nunchuck.axis_jx,
     nunchuck.axis_jy,
     nunchuck.axis_ax,
@@ -28,7 +28,9 @@ loop do
     nunchuck.digital_up?,
     nunchuck.digital_left?,
     nunchuck.digital_right?              
-  ]
+  ].map do |q|
+    q.to_s.ljust(5)
+  end.join()
   
   sleep 0.2
 end
