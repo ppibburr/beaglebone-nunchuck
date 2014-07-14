@@ -1,3 +1,5 @@
+require "xcb"
+
 require "xinput/device"
 require "xinput/mouse"
 require "xinput/keyboard"
