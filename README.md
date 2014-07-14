@@ -56,3 +56,20 @@ loop do
   sleep 0.2
 end
 ```
+
+HOWTO
+===
+Use a beaglebone with nunchuck to send inputs to a remote machine:  
+Port 3333 is default.  
+
+```sh
+# ** This is the remote machine **
+# Replace 'XXX.XXX.X.X' with the remotes IP
+RUBYLIB=$RUBYLIB:./lib bin/nunchuck-xinput-service XXX.XXX.X.X
+```
+
+```sh
+# ** This is the beaglebone ***
+# Replace 'XXX.XXX.X.X' with the remotes IP
+ruby -I./lib ./sample/remote_mouse.rb XXX.XXX.X.X
+```

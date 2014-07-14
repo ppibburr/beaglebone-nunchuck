@@ -6,7 +6,7 @@ module XInput
   # Implements an input device for the X Display of the local machine
   module Local
     attr_accessor :connection
-    # @param connection [XCB::XCB_CONNECTION_T] the X11 connection to send events to
+    # @param connection [XCB::CONNECTION_T] the X11 connection to send events to
     def initialize connection = nil, *o
       super *o
       
