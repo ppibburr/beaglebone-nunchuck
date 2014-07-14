@@ -1,6 +1,6 @@
 module Nunchuck  
   module X11InputDevice
-    POLL_RATE = 0.08
+    POLL_RATE = 0.016
   
     MOUSE_BUTTON_LEFT   = 1
     MOUSE_BUTTON_MIDDLE = 2
