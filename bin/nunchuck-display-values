@@ -24,7 +24,7 @@ puts("\r"+[
     :LEFT,
     :RIGHT              
   ].map do |q|
-    q.to_s.ljust(10)
+    q.to_s.ljust(7)
   end.join()
 )
 
@@ -46,7 +46,7 @@ loop do
     nunchuck.digital_left?,
     nunchuck.digital_right?              
   ].map do |q|
-    q.to_s.ljust(10)
+    q.to_s.ljust(7)
   end.join())
   
   sleep 0.2
