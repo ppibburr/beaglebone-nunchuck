@@ -16,6 +16,22 @@ loop do
     nunchuck.read_packet
   end
   
+  puts("\r"+[
+    :jx,
+    :jy,
+    :ax,
+    :ay,
+    :az,
+    :C,
+    :Z,
+    :DOWN,  
+    :UP,
+    :LEFT,
+    :RIGHT              
+  ].map do |q|
+    q.to_s.ljust(10)
+  end.join())
+  
   print("\r"+[
     nunchuck.axis_jx,
     nunchuck.axis_jy,
